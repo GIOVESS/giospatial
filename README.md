@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# GIOSPATIAL — Company Landing Page
 
-## Project info
+Official landing page for **GIOSPATIAL**, a geo-intelligence and spatial data technology company based in Nakuru, Kenya. The site presents the company's flagship platform — the **Naivasha Basin Intelligence System (NBIS)** — alongside solutions, technology stack, customer stories, and contact.
 
-**URL**: https://lovable.dev/projects/f57386fb-76b7-423a-b414-efd2b9bdb1ef
+## Tech Stack
 
-## How can I edit this code?
+- **Vite** — build tooling
+- **React 18** + **TypeScript**
+- **Tailwind CSS** — utility-first styling
+- **shadcn/ui** — accessible component primitives
+- **Lucide React** — icons
 
-There are several ways of editing your application.
+## Local Development
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f57386fb-76b7-423a-b414-efd2b9bdb1ef) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 18+ and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start dev server (hot-reload)
 npm run dev
+
+# Production build
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+The dev server runs at `http://localhost:8080` by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── assets/          # Logo and static images
+├── components/      # Page sections (Hero, Navigation, Footer, etc.)
+├── hooks/           # Custom React hooks (toast, mobile detection)
+├── lib/             # Utility helpers
+├── pages/           # Route-level page components
+└── index.css        # Global styles and scroll-reveal animations
+public/
+└── giospatial-logo.png   # Favicon source
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Key Sections
 
-## What technologies are used for this project?
+| Section ID      | Component              | Description                          |
+|-----------------|------------------------|--------------------------------------|
+| `#home`         | `Hero.tsx`             | Hero with headline and key stats     |
+| `#about`        | `WhatIs.tsx`           | Company positioning                  |
+| `#products`     | `Products.tsx`         | NBIS flagship platform               |
+| `#capabilities` | `Capabilities.tsx`     | Core platform capabilities           |
+| `#sectors`      | `Sectors.tsx`          | Industry verticals                   |
+| `#stories`      | `CustomerStories.tsx`  | Case studies and impact numbers      |
+| `#technology`   | `Technology.tsx`       | Full technology stack                |
+| `#benefits`     | `Benefits.tsx`         | Support and deployment benefits      |
+| `#contact`      | `ContactSales.tsx`     | Sales enquiry form                   |
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Build the project with `npm run build`. The output is in `dist/` — deploy to any static host (Netlify, Vercel, Cloudflare Pages, etc.).
 
-## How can I deploy this project?
+For a custom domain, configure your DNS to point to your hosting provider and update the `<meta>` tags in `index.html` accordingly.
 
-Simply open [Lovable](https://lovable.dev/projects/f57386fb-76b7-423a-b414-efd2b9bdb1ef) and click on Share -> Publish.
+## Contact
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Email**: sales@giospatial.org  
+**Location**: Nakuru, Kenya · East Africa
