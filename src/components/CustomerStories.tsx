@@ -1,12 +1,8 @@
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import dashboardImg from "@/assets/dashboard-mockup.jpg";
-import gisMapImg from "@/assets/gis-map-dark.jpg";
-import africaMapImg from "@/assets/africa-map.jpg";
-import dronesImg from "@/assets/drones-agriculture.jpg";
+import { dashboardMockup as dashboardImg, gisMapDark as gisMapImg, africaMap as africaMapImg, dronesAgriculture as dronesImg, stockPhotos } from "@/assets/images";
 
-// Solar/renewable energy field — relevant for KenGen story (Unsplash)
-const solarImg = "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop";
+const solarImg = stockPhotos.solarField;
 
 const STORIES = [
   {
@@ -88,29 +84,29 @@ const CustomerStories = () => {
   const story = STORIES[activeIdx];
 
   return (
-    <section id="stories" style={{ background: "#111111", padding: "96px 0" }}>
+    <section id="stories" style={{ background: "#ffffff", padding: "96px 0" }}>
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-12" data-reveal>
           <span
             className="inline-block font-bold uppercase tracking-[0.15em] mb-4 px-3 py-1 rounded-full border"
-            style={{ fontSize: 10, color: "#00a0e3", borderColor: "rgba(0,160,227,0.25)", background: "rgba(0,160,227,0.06)" }}
+            style={{ fontSize: 10, color: "#265B01", borderColor: "rgba(38,91,1,0.25)", background: "rgba(38,91,1,0.06)" }}
           >
             Success Stories
           </span>
           <h2
-            className="font-bold text-white mb-4"
+            className="font-bold text-foreground mb-4"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
           >
             Customer Stories
           </h2>
-          <p style={{ color: "#7a7a7a", fontSize: 16, lineHeight: 1.7, maxWidth: 560, margin: "0 auto" }}>
+          <p style={{ color: "#5a5a5a", fontSize: 16, lineHeight: 1.7, maxWidth: 560, margin: "0 auto" }}>
             Real organisations across Africa using GIOSPATIAL's platform to make
             faster, better-informed spatial decisions.{" "}
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-[#00a0e3] hover:underline"
+              className="text-[#265B01] hover:underline"
             >
               Share your story
             </button>
@@ -121,7 +117,7 @@ const CustomerStories = () => {
         <div className="flex items-center gap-2 mb-8" data-reveal data-delay="1">
           <button
             onClick={() => scrollTabs("left")}
-            className="shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-[#00a0e3] hover:text-[#00a0e3] transition-colors"
+            className="shrink-0 w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-foreground/40 hover:border-[#265B01] hover:text-[#265B01] transition-colors"
           >
             <ChevronLeft size={15} />
           </button>
@@ -137,9 +133,9 @@ const CustomerStories = () => {
                 onClick={() => switchTo(i)}
                 className="shrink-0 px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors relative"
                 style={{
-                  color: activeIdx === i ? "#ffffff" : "#a0a0a0",
+                  color: activeIdx === i ? "#141B44" : "#909090",
                   background: "transparent",
-                  borderBottom: activeIdx === i ? "3px solid #00a0e3" : "3px solid transparent",
+                  borderBottom: activeIdx === i ? "3px solid #265B01" : "3px solid transparent",
                 }}
               >
                 {s.org}
@@ -149,7 +145,7 @@ const CustomerStories = () => {
 
           <button
             onClick={() => scrollTabs("right")}
-            className="shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-[#00a0e3] hover:text-[#00a0e3] transition-colors"
+            className="shrink-0 w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-foreground/40 hover:border-[#265B01] hover:text-[#265B01] transition-colors"
           >
             <ChevronRight size={15} />
           </button>
@@ -157,7 +153,7 @@ const CustomerStories = () => {
 
         {/* Story panel */}
         <div
-          className="grid lg:grid-cols-9 gap-0 rounded-xl overflow-hidden border border-white/[0.08] tab-fade"
+          className="grid lg:grid-cols-9 gap-0 rounded-xl overflow-hidden border border-black/[0.08] tab-fade"
           style={{ opacity: fading ? 0 : 1, transition: "opacity 0.2s ease" }}
         >
           {/* Image */}
@@ -168,33 +164,33 @@ const CustomerStories = () => {
               className="w-full h-full object-cover"
               style={{ minHeight: 360 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#111111]/60 hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#f7f7f5]/80 hidden lg:block" />
           </div>
 
           {/* Story content */}
-          <div className="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-center" style={{ background: "#0a0a0a" }}>
+          <div className="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-center" style={{ background: "#f7f7f5" }}>
             <p
               className="font-bold uppercase tracking-[0.15em] mb-3"
-              style={{ fontSize: 11, color: "#00a0e3" }}
+              style={{ fontSize: 11, color: "#265B01" }}
             >
               {story.category}
             </p>
             <h3
-              className="font-bold text-white mb-5 leading-snug"
+              className="font-bold text-foreground mb-5 leading-snug"
               style={{ fontSize: "clamp(20px, 2.5vw, 26px)" }}
             >
               {story.headline}
             </h3>
             <div className="space-y-3">
               {story.body.map((para, i) => (
-                <p key={i} style={{ color: "#7a7a7a", fontSize: 14.5, lineHeight: 1.75 }}>
+                <p key={i} style={{ color: "#5a5a5a", fontSize: 14.5, lineHeight: 1.75 }}>
                   {para}
                 </p>
               ))}
             </div>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="mt-7 flex items-center gap-2 text-sm font-semibold text-[#00a0e3] hover:underline group w-fit"
+              className="mt-7 flex items-center gap-2 text-sm font-semibold text-[#265B01] hover:underline group w-fit"
             >
               Request a similar solution
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

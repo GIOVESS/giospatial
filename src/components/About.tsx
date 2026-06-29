@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Target, Eye, Zap, TrendingUp, Waves, Wheat } from "lucide-react";
-import giovanni from "@/assets/giovanni.jpeg";
+import { giovanniBwayo as giovanni } from "@/assets/images";
 
 const challenges = [
   {
@@ -25,7 +25,7 @@ const challenges = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-muted/20">
+    <section id="leadership" className="py-24 bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -120,18 +120,24 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-secondary rounded-xl blur-xl opacity-25" />
                   <img
                     src={giovanni}
-                    alt="Giovanni Bwayo — Founder & CEO, Giospatial Labs"
+                    alt="Giovanni Bwayo — Founder, CEO & Chief GIS Developer, Giospatial Labs"
                     className="relative w-44 h-44 rounded-xl object-cover border-2 border-secondary/25"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Giovanni Bwayo</h3>
-                <p className="text-secondary text-sm font-semibold mb-5">Founder & CEO</p>
-                <blockquote className="text-sm text-muted-foreground leading-relaxed border-l-4 border-primary pl-4 text-left">
-                  "Location data is only as valuable as the architecture supporting it. At
-                  Giospatial Labs, we go beyond mapping — we build the end-to-end systems that
-                  empower Africa's modern enterprises to understand and act on spatial data
-                  with precision and confidence."
-                </blockquote>
+                <p className="text-secondary text-sm font-semibold mb-5">
+                  Founder, CEO &amp; Chief GIS Developer
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed border-l-4 border-primary pl-4 text-left">
+                A technology executive and geospatial innovator leading the company's vision at the intersection
+                of artificial intelligence, GeoAI, and GIS. With expertise spanning data science, spatial
+                analytics, and software engineering, he drives the development of intelligent geospatial
+                solutions that transform complex data into actionable insights. His technical background includes
+                Python, R, Django, Flask, PostgreSQL, PostGIS, remote sensing, satellite imagery analysis, and
+                predictive spatial modeling. Committed to innovation, sustainability, and data-driven
+                decision-making, he combines engineering excellence with strategic leadership to deliver scalable
+                technologies that solve real-world challenges.
+                </p>
               </div>
             </Card>
           </div>

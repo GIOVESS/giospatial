@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Leaf, Droplet, Users, Globe, TreePine } from "lucide-react";
-import dronesImage from "@/assets/drones-agriculture.jpg";
+import { dronesAgriculture as dronesImage } from "@/assets/images";
 
 const Impact = () => {
   const initiatives = [

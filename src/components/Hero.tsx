@@ -15,14 +15,14 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #06090f 0%, #0a0a0a 50%, #070d0a 100%)",
-        paddingTop: 80,
+        background: "linear-gradient(160deg, #ffffff 0%, #fafafa 50%, #f7f9f5 100%)",
+        paddingTop: 96,
       }}
     >
       {/* Subtle top accent line */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent 0%, #00a0e3 30%, #16a34a 70%, transparent 100%)", opacity: 0.4 }}
+        style={{ background: "linear-gradient(90deg, transparent 0%, #265B01 30%, #141B44 70%, transparent 100%)", opacity: 0.4 }}
       />
 
       {/* Content */}
@@ -33,9 +33,9 @@ const Hero = () => {
           className="inline-block font-bold uppercase tracking-[0.18em] mb-7 px-4 py-1.5 rounded-full border animate-fade-up"
           style={{
             fontSize: 10,
-            color: "#00a0e3",
-            borderColor: "rgba(0,160,227,0.25)",
-            background: "rgba(0,160,227,0.06)",
+            color: "#265B01",
+            borderColor: "rgba(38,91,1,0.25)",
+            background: "rgba(38,91,1,0.06)",
             animationDelay: "0s",
           }}
         >
@@ -44,12 +44,12 @@ const Hero = () => {
 
         {/* Company name */}
         <h1
-          className="font-black text-white animate-fade-up leading-none"
+          className="font-black text-foreground animate-fade-up leading-none"
           style={{
             fontSize: "clamp(56px, 9vw, 96px)",
             letterSpacing: "0.07em",
             animationDelay: "0.1s",
-            background: "linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%)",
+            background: "linear-gradient(135deg, #141B44 0%, #265B01 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -59,7 +59,7 @@ const Hero = () => {
 
         {/* Tagline */}
         <p
-          className="text-[#8a8a8a] animate-fade-up mt-6"
+          className="text-foreground/55 animate-fade-up mt-6"
           style={{ fontSize: 17, lineHeight: 1.75, maxWidth: 520, animationDelay: "0.2s" }}
         >
           Africa's geo-intelligence company — engineering end-to-end spatial data
@@ -73,14 +73,13 @@ const Hero = () => {
         >
           <button
             onClick={() => scrollTo("contact")}
-            className="px-8 py-3 text-sm font-semibold text-white rounded-lg transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
-            style={{ background: "#00a0e3" }}
+            className="px-8 py-3 text-sm font-semibold text-accent-foreground bg-accent hover:bg-accent-light rounded-lg transition-all duration-200 hover:-translate-y-0.5"
           >
             Request a Demo
           </button>
           <button
             onClick={() => scrollTo("products")}
-            className="px-8 py-3 text-sm font-semibold text-white/60 rounded-lg border border-white/10 hover:border-white/25 hover:text-white/90 transition-all duration-200 hover:-translate-y-0.5"
+            className="px-8 py-3 text-sm font-semibold text-foreground/60 rounded-lg border border-black/10 hover:border-black/25 hover:text-foreground/90 transition-all duration-200 hover:-translate-y-0.5"
           >
             See NBIS Platform
           </button>
@@ -98,12 +97,12 @@ const Hero = () => {
                 style={{
                   fontSize: 28,
                   letterSpacing: "-0.02em",
-                  color: i % 2 === 0 ? "#00a0e3" : "#16a34a",
+                  color: i % 2 === 0 ? "#265B01" : "#141B44",
                 }}
               >
                 {stat.value}
               </div>
-              <div style={{ color: "#4a4a4a", fontSize: 11, marginTop: 4, lineHeight: 1.4 }}>
+              <div className="text-foreground/45" style={{ fontSize: 11, marginTop: 4, lineHeight: 1.4 }}>
                 {stat.label}
               </div>
             </div>
@@ -112,7 +111,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom divider fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 };

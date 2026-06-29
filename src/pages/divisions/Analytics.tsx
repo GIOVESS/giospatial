@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BarChart3, TrendingUp, Map, Database, Brain, Target } from "lucide-react";
-import gisMapImage from "@/assets/gis-map-dark.jpg";
+import { gisMapDark as gisMapImage } from "@/assets/images";
 
 const Analytics = () => {
   const services = [

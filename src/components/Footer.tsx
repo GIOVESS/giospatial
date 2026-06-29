@@ -1,6 +1,11 @@
-import logo from "@/assets/giospatial-logo.png";
+import { useNavigate, useLocation } from "react-router-dom";
+import { logoHorizontal } from "@/assets/images";
 import { Mail, MapPin, Linkedin, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
 
+/**
+ * Footer link columns. Same `{ id }` vs `{ path }` convention as
+ * Navigation.tsx's MEGA_NAV — see the comment there for details.
+ */
 const COLS = [
   {
     heading: "Platform",
@@ -28,7 +33,7 @@ const COLS = [
       { label: "About GIOSPATIAL",      id: "about" },
       { label: "Our Technology",        id: "technology" },
       { label: "Benefits & Support",    id: "benefits" },
-      { label: "Careers",               id: "contact" },
+      { label: "Careers",               path: "/careers" },
       { label: "Contact Sales",         id: "contact" },
     ],
   },
@@ -42,17 +47,39 @@ const SOCIALS = [
   { Icon: Youtube,   href: "https://youtube.com/@giospatial",        label: "YouTube" },
 ];
 
-const LEGAL = ["Privacy", "Terms", "Legal"];
+const LEGAL = [
+  { label: "Privacy", path: "/privacy" },
+  { label: "Terms", path: "/terms" },
+  { label: "Legal", path: "/legal" },
+];
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const year = new Date().getFullYear();
 
+  // Mirrors Navigation.tsx: scrolling to a homepage section only works when
+  // already on "/" — otherwise navigate there first and let Index.tsx scroll
+  // once it mounts (see its `location.state.scrollTo` effect).
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const goTo = (link: { id?: string; path?: string }) => {
+    if (link.path) {
+      navigate(link.path);
+      window.scrollTo(0, 0);
+    } else if (link.id) {
+      scrollTo(link.id);
+    }
   };
 
   return (
-    <footer style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+    <footer className="bg-muted border-t border-black/[0.06]">
       <div className="max-w-[1200px] mx-auto px-6 py-14">
 
         {/* Top row: logo + columns */}
@@ -60,16 +87,10 @@ const Footer = () => {
 
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <img src={logo} alt="GIOSPATIAL" className="h-7 w-auto opacity-85" />
-              <span
-                className="font-black text-white text-sm"
-                style={{ letterSpacing: "0.07em" }}
-              >
-                GIOSPATIAL
-              </span>
+            <div className="flex items-center mb-4">
+              <img src={logoHorizontal} alt="GIOSPATIAL — Intelligence in Every Location" className="h-12 w-auto" />
             </div>
-            <p style={{ color: "#555", fontSize: 13, lineHeight: 1.7, maxWidth: 200 }}>
+            <p className="text-foreground/50" style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 200 }}>
               Geo-intelligence and spatial data technology for Africa's most critical decisions.
             </p>
 
@@ -77,14 +98,14 @@ const Footer = () => {
             <div className="mt-5 space-y-2">
               <a
                 href="mailto:sales@giospatial.org"
-                className="flex items-center gap-2 text-white/40 hover:text-[#00a0e3] transition-colors"
+                className="flex items-center gap-2 text-foreground/50 hover:text-primary transition-colors"
                 style={{ fontSize: 13 }}
               >
                 <Mail size={13} />
                 sales@giospatial.org
               </a>
-              <div className="flex items-center gap-2" style={{ color: "#555", fontSize: 13 }}>
-                <MapPin size={13} className="text-[#00a0e3] shrink-0" />
+              <div className="flex items-center gap-2 text-foreground/50" style={{ fontSize: 13 }}>
+                <MapPin size={13} className="text-primary shrink-0" />
                 Nakuru, Kenya · East Africa
               </div>
             </div>
@@ -94,7 +115,7 @@ const Footer = () => {
           {COLS.map((col) => (
             <div key={col.heading}>
               <h4
-                className="font-bold text-white mb-4"
+                className="font-bold text-foreground mb-4"
                 style={{ fontSize: 13 }}
               >
                 {col.heading}
@@ -103,8 +124,8 @@ const Footer = () => {
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <button
-                      onClick={() => scrollTo(link.id)}
-                      className="text-white/45 hover:text-white transition-colors text-left"
+                      onClick={() => goTo(link)}
+                      className="text-foreground/55 hover:text-foreground transition-colors text-left"
                       style={{ fontSize: 13 }}
                     >
                       {link.label}
@@ -117,7 +138,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: 28 }}>
+        <div className="border-t border-black/[0.07]" style={{ paddingTop: 28 }}>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
 
             {/* Social icons */}
@@ -129,7 +150,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/35 hover:border-[#00a0e3] hover:text-[#00a0e3] transition-colors"
+                  className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-foreground/40 hover:border-primary hover:text-primary transition-colors"
                 >
                   <Icon size={14} />
                 </a>
@@ -140,14 +161,15 @@ const Footer = () => {
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
               {LEGAL.map((item) => (
                 <button
-                  key={item}
-                  className="text-white/30 hover:text-white/60 transition-colors"
+                  key={item.label}
+                  onClick={() => goTo(item)}
+                  className="text-foreground/40 hover:text-foreground/70 transition-colors"
                   style={{ fontSize: 12 }}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
-              <span style={{ fontSize: 12, color: "#444" }}>
+              <span className="text-foreground/35" style={{ fontSize: 12 }}>
                 © {year} Giospatial Ltd.
               </span>
             </div>

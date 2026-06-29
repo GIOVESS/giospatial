@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Cloud, Globe, Satellite, Database, Shield, Zap } from "lucide-react";
-import techMapImage from "@/assets/tech-map-grid.jpg";
+import { techMapGrid as techMapImage } from "@/assets/images";
 
 const Platforms = () => {
   const platforms = [

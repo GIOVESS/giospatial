@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Rocket, TrendingUp, Globe2 } from "lucide-react";
-import africaMap from "@/assets/africa-map.jpg";
+import { africaMap } from "@/assets/images";
 
 const FutureOutlook = () => {
   return (

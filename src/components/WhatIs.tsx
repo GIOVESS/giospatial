@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 
-// Aerial view of Lake Naivasha / East Africa (Unsplash)
-const AERIAL_AFRICA = "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1200&q=80&auto=format&fit=crop";
+import { stockPhotos } from "@/assets/images";
+
+const AERIAL_AFRICA = stockPhotos.aerialAfrica;
 
 const METRICS = [
   { value: "70%", label: "Faster alert response" },
@@ -16,7 +17,7 @@ const WhatIs = () => {
   };
 
   return (
-    <section id="about" style={{ background: "#111111", padding: "96px 0" }}>
+    <section id="about" style={{ background: "#f7f7f5", padding: "96px 0" }}>
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-14 items-center">
 
@@ -24,19 +25,19 @@ const WhatIs = () => {
           <div className="lg:col-span-2" data-reveal>
             <span
               className="inline-block font-bold uppercase tracking-[0.15em] mb-5 px-3 py-1 rounded-full border"
-              style={{ fontSize: 10, color: "#00a0e3", borderColor: "rgba(0,160,227,0.25)", background: "rgba(0,160,227,0.06)" }}
+              style={{ fontSize: 10, color: "#265B01", borderColor: "rgba(38,91,1,0.25)", background: "rgba(38,91,1,0.06)" }}
             >
               About GIOSPATIAL
             </span>
 
             <h2
-              className="font-bold text-white mb-6 leading-tight"
+              className="font-bold text-foreground mb-6 leading-tight"
               style={{ fontSize: "clamp(26px, 3vw, 38px)" }}
             >
               Not a mapping company.<br />An architecture company.
             </h2>
 
-            <div className="space-y-4" style={{ color: "#7a7a7a", fontSize: 15.5, lineHeight: 1.75 }}>
+            <div className="space-y-4" style={{ color: "#5a5a5a", fontSize: 15.5, lineHeight: 1.75 }}>
               <p>
                 GIOSPATIAL engineers complete, end-to-end geospatial systems — from
                 satellite data ingestion and geo-processing pipelines, through GeoAI
@@ -52,14 +53,14 @@ const WhatIs = () => {
             <div className="mt-8 flex flex-col gap-2.5">
               <button
                 onClick={() => scrollTo("products")}
-                className="flex items-center gap-2 text-sm font-medium text-[#00a0e3] hover:underline transition-all group w-fit"
+                className="flex items-center gap-2 text-sm font-medium text-[#265B01] hover:underline transition-all group w-fit"
               >
                 Explore NBIS platform
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={() => scrollTo("technology")}
-                className="flex items-center gap-2 text-sm font-medium text-[#00a0e3] hover:underline transition-all group w-fit"
+                className="flex items-center gap-2 text-sm font-medium text-[#265B01] hover:underline transition-all group w-fit"
               >
                 See our technology stack
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -71,16 +72,16 @@ const WhatIs = () => {
               {METRICS.map((m) => (
                 <div
                   key={m.label}
-                  className="rounded-xl p-4 text-center border border-white/[0.07]"
-                  style={{ background: "rgba(255,255,255,0.02)" }}
+                  className="rounded-xl p-4 text-center border border-black/[0.07]"
+                  style={{ background: "#ffffff" }}
                 >
                   <div
-                    className="font-bold text-[#00a0e3]"
+                    className="font-bold text-[#265B01]"
                     style={{ fontSize: 22, letterSpacing: "-0.02em" }}
                   >
                     {m.value}
                   </div>
-                  <div style={{ color: "#555", fontSize: 10, marginTop: 4, lineHeight: 1.4 }}>
+                  <div style={{ color: "#888", fontSize: 10, marginTop: 4, lineHeight: 1.4 }}>
                     {m.label}
                   </div>
                 </div>
@@ -93,7 +94,7 @@ const WhatIs = () => {
             className="lg:col-span-3 relative rounded-xl overflow-hidden"
             data-reveal
             data-delay="2"
-            style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.5)" }}
+            style={{ boxShadow: "0 24px 64px rgba(20,27,68,0.18)" }}
           >
             <img
               src={AERIAL_AFRICA}
@@ -110,7 +111,7 @@ const WhatIs = () => {
               <div className="flex items-center gap-2 mb-1">
                 <span
                   className="inline-block w-1.5 h-1.5 rounded-full"
-                  style={{ background: "#16a34a" }}
+                  style={{ background: "#265B01" }}
                 />
                 <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/60">
                   Monitoring Territory

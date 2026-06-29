@@ -28,24 +28,24 @@ const UseCases = () => {
   };
 
   return (
-    <section id="sectors" style={{ background: "#0a0a0a", padding: "96px 0" }}>
+    <section id="sectors" style={{ background: "#ffffff", padding: "96px 0" }}>
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-12" data-reveal>
           <span
             className="inline-block font-bold uppercase tracking-[0.15em] mb-4 px-3 py-1 rounded-full border"
-            style={{ fontSize: 10, color: "#00a0e3", borderColor: "rgba(0,160,227,0.25)", background: "rgba(0,160,227,0.06)" }}
+            style={{ fontSize: 10, color: "#265B01", borderColor: "rgba(38,91,1,0.25)", background: "rgba(38,91,1,0.06)" }}
           >
             Solutions
           </span>
           <h2
-            className="font-bold text-white mb-4"
+            className="font-bold text-foreground mb-4"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
           >
             Use Cases
           </h2>
-          <p style={{ color: "#7a7a7a", fontSize: 16, lineHeight: 1.7, maxWidth: 580, margin: "0 auto" }}>
+          <p style={{ color: "#5a5a5a", fontSize: 16, lineHeight: 1.7, maxWidth: 580, margin: "0 auto" }}>
             End-to-end geospatial architecture deployed across Africa's most pressing
             enterprise and public-sector challenges.
           </p>
@@ -56,20 +56,20 @@ const UseCases = () => {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
-              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:border-[#00a0e3] hover:text-[#00a0e3] transition-colors"
+              className="w-9 h-9 rounded-full border border-black/10 flex items-center justify-center text-foreground/50 hover:border-[#265B01] hover:text-[#265B01] transition-colors"
               aria-label="Scroll left"
             >
               <ChevronLeft size={17} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:border-[#00a0e3] hover:text-[#00a0e3] transition-colors"
+              className="w-9 h-9 rounded-full border border-black/10 flex items-center justify-center text-foreground/50 hover:border-[#265B01] hover:text-[#265B01] transition-colors"
               aria-label="Scroll right"
             >
               <ChevronRight size={17} />
             </button>
           </div>
-          <span style={{ fontSize: 12, color: "#7a7a7a" }}>{CARDS.length} use cases</span>
+          <span style={{ fontSize: 12, color: "#5a5a5a" }}>{CARDS.length} use cases</span>
         </div>
 
         {/* Carousel */}
@@ -83,35 +83,35 @@ const UseCases = () => {
             return (
               <div
                 key={card.title}
-                className="uc-card group shrink-0 rounded-lg border border-white/[0.08] hover:border-[#00a0e3]/50 transition-all duration-300 hover:-translate-y-1"
+                className="uc-card group shrink-0 rounded-lg border border-black/[0.08] hover:border-[#265B01]/50 transition-all duration-300 hover:-translate-y-1"
                 style={{
                   width: 280,
                   padding: "24px 24px 28px",
-                  background: "#111111",
-                  boxShadow: "0 0 0 0 rgba(0,160,227,0)",
+                  background: "#f7f7f5",
+                  boxShadow: "0 0 0 0 rgba(38,91,1,0)",
                   transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,160,227,0.12)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(38,91,1,0.14)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 0 0 rgba(0,160,227,0)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 0 0 rgba(38,91,1,0)";
                 }}
                 data-reveal
                 data-delay={String(Math.min(i % 4 + 1, 5))}
               >
                 <Icon
                   size={40}
-                  className="mb-5 transition-colors duration-200 text-white/30 group-hover:text-[#00a0e3]"
+                  className="mb-5 transition-colors duration-200 text-foreground/30 group-hover:text-[#265B01]"
                   strokeWidth={1.25}
                 />
                 <h3
-                  className="font-bold text-white mb-2 leading-snug group-hover:text-white"
+                  className="font-bold text-foreground mb-2 leading-snug group-hover:text-foreground"
                   style={{ fontSize: 17 }}
                 >
                   {card.title}
                 </h3>
-                <p style={{ color: "#7a7a7a", fontSize: 13.5, lineHeight: 1.65 }}>
+                <p style={{ color: "#5a5a5a", fontSize: 13.5, lineHeight: 1.65 }}>
                   {card.desc}
                 </p>
               </div>

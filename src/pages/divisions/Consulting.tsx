@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Users, BookOpen, Award, Target, TrendingUp } from "lucide-react";
-import earthNetworkImage from "@/assets/earth-network.jpg";
+import { earthNetwork as earthNetworkImage } from "@/assets/images";
 
 const Consulting = () => {
   const services = [

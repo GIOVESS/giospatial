@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BrainCircuit, Cpu, Eye, Layers, Zap, Sparkles } from "lucide-react";
-import dataLandscapeImage from "@/assets/data-landscape.jpg";
+import { dataLandscape as dataLandscapeImage } from "@/assets/images";
 
 const AILab = () => {
   const capabilities = [
