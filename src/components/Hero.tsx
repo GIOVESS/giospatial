@@ -16,7 +16,7 @@ const Hero = () => {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
         background: "linear-gradient(160deg, #ffffff 0%, #fafafa 50%, #f7f9f5 100%)",
-        paddingTop: 96,
+        paddingTop: 128,
       }}
     >
       {/* Subtle top accent line */}
@@ -46,7 +46,7 @@ const Hero = () => {
         <h1
           className="font-black text-foreground animate-fade-up leading-none"
           style={{
-            fontSize: "clamp(56px, 9vw, 96px)",
+            fontSize: "clamp(32px, 12vw, 96px)",
             letterSpacing: "0.07em",
             animationDelay: "0.1s",
             background: "linear-gradient(135deg, #141B44 0%, #265B01 100%)",
@@ -87,7 +87,7 @@ const Hero = () => {
 
         {/* Stats */}
         <div
-          className="mt-16 grid grid-cols-4 gap-8 animate-fade-up w-full"
+          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 sm:gap-8 animate-fade-up w-full"
           style={{ animationDelay: "0.46s" }}
         >
           {STATS.map((stat, i) => (

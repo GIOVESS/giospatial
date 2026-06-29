@@ -31,7 +31,7 @@ const COLS = [
     heading: "Company",
     links: [
       { label: "About GIOSPATIAL",      id: "about" },
-      { label: "Our Technology",        id: "technology" },
+      { label: "Leadership & Team",     path: "/team" },
       { label: "Benefits & Support",    id: "benefits" },
       { label: "Careers",               path: "/careers" },
       { label: "Contact Sales",         id: "contact" },

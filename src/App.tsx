@@ -10,6 +10,7 @@ import AILab from "./pages/divisions/AILab";
 import Platforms from "./pages/divisions/Platforms";
 import Consulting from "./pages/divisions/Consulting";
 import Impact from "./pages/divisions/Impact";
+import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import PartnerProgramme from "./pages/PartnerProgramme";
 import DeveloperForum from "./pages/DeveloperForum";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/divisions/platforms" element={<Platforms />} />
           <Route path="/divisions/consulting" element={<Consulting />} />
           <Route path="/divisions/impact" element={<Impact />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/partners" element={<PartnerProgramme />} />
           <Route path="/developer-forum" element={<DeveloperForum />} />

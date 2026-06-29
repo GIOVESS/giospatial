@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Target, Eye, Zap, TrendingUp, Waves, Wheat } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Target, Eye, Zap, TrendingUp, Waves, Wheat, Users, ArrowRight } from "lucide-react";
 import { giovanniBwayo as giovanni } from "@/assets/images";
 
 const challenges = [
@@ -24,6 +26,8 @@ const challenges = [
 ];
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="leadership" className="py-24 bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +116,7 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Founder */}
+          {/* Founder teaser — full profile + rest of the team live on /team */}
           <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Card className="p-8 hover:shadow-glow transition-all duration-300">
               <div className="flex flex-col items-center text-center">
@@ -128,16 +132,15 @@ const About = () => {
                 <p className="text-secondary text-sm font-semibold mb-5">
                   Founder, CEO &amp; Chief GIS Developer
                 </p>
-                <p className="text-sm text-muted-foreground leading-relaxed border-l-4 border-primary pl-4 text-left">
-                A technology executive and geospatial innovator leading the company's vision at the intersection
-                of artificial intelligence, GeoAI, and GIS. With expertise spanning data science, spatial
-                analytics, and software engineering, he drives the development of intelligent geospatial
-                solutions that transform complex data into actionable insights. His technical background includes
-                Python, R, Django, Flask, PostgreSQL, PostGIS, remote sensing, satellite imagery analysis, and
-                predictive spatial modeling. Committed to innovation, sustainability, and data-driven
-                decision-making, he combines engineering excellence with strategic leadership to deliver scalable
-                technologies that solve real-world challenges.
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  A technology executive and geospatial innovator leading the company's vision at the
+                  intersection of artificial intelligence, GeoAI, and GIS.
                 </p>
+                <Button onClick={() => navigate("/team")} variant="outline" className="group">
+                  <Users size={16} className="mr-2" />
+                  Meet the full team
+                  <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
             </Card>
           </div>

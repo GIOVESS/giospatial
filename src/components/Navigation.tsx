@@ -178,7 +178,7 @@ const MEGA_NAV = [
         links: [
           { label: "About GIOSPATIAL",           id: "about" },
           { label: "Our Mission",                id: "leadership" },
-          { label: "Leadership & Team",          id: "leadership" },
+          { label: "Leadership & Team",          path: "/team" },
           { label: "Careers",                   path: "/careers" },
         ],
       },
@@ -264,7 +264,7 @@ const Navigation = () => {
           ? "bg-white/95 backdrop-blur-md border-b border-black/[0.08] shadow-[0_4px_24px_rgba(20,27,68,0.08)]"
           : "bg-white border-b border-black/[0.06]"
       }`}
-      style={{ height: 76 }}
+      style={{ height: 96 }}
     >
       <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between gap-6">
 
@@ -274,7 +274,7 @@ const Navigation = () => {
           onClick={(e) => { e.preventDefault(); scrollTo("home"); }}
           className="flex items-center shrink-0 group"
         >
-          <img src={logoHorizontal} alt="GIOSPATIAL — Intelligence in Every Location" className="h-14 w-auto" />
+          <img src={logoHorizontal} alt="GIOSPATIAL — Intelligence in Every Location" className="h-16 sm:h-20 w-auto" />
         </a>
 
         {/* Desktop mega-nav */}
@@ -306,7 +306,7 @@ const Navigation = () => {
               {activeMenu === item.name && (
                 <div
                   className="fixed left-0 right-0 border-b border-black/[0.07] shadow-[0_16px_48px_rgba(20,27,68,0.12)] z-50 bg-white"
-                  style={{ top: 76 }}
+                  style={{ top: 96 }}
                   onMouseEnter={() => openMenu(item.name)}
                   onMouseLeave={closeMenu}
                 >
