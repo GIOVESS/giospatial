@@ -126,9 +126,9 @@ const MEGA_NAV = [
       },
     ],
     featured: {
-      label: "Success Story",
+      label: "Demo Solution",
       title: "Lake Naivasha Basin Authority",
-      desc: "How NBIS transformed basin-wide environmental monitoring for a Ramsar-designated wetland.",
+      desc: "An illustrative demo showing how NBIS could transform basin-wide environmental monitoring for a Ramsar-designated wetland.",
       id: "stories",
     },
   },
