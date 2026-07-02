@@ -15,7 +15,7 @@ const BENEFITS = [
   {
     icon: Users,
     title: "Active Community of Practice",
-    desc: "A growing network of GIS professionals, data scientists, and government analysts across Africa — sharing spatial datasets, workflows, and platform extensions.",
+    desc: "A growing network of GIS professionals, data scientists, and government analysts across Kenya — sharing spatial datasets, workflows, and platform extensions.",
   },
   {
     icon: Globe,

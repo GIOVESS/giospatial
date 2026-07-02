@@ -1,8 +1,8 @@
 const STATS = [
-  { value: "50+", label: "Organisations" },
-  { value: "2M+", label: "Hectares Monitored" },
-  { value: "5", label: "Countries Active" },
-  { value: "24h", label: "Alert Pipeline" },
+  { value: "20+", label: "Organisations" },
+  { value: "340K+", label: "Hectares Monitored" },
+  { value: "12", label: "Counties Active" },
+  { value: "< 24h", label: "Alert Pipeline" },
 ];
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
         background: "linear-gradient(160deg, #ffffff 0%, #fafafa 50%, #f7f9f5 100%)",
-        paddingTop: 128,
+        paddingTop: 96,
       }}
     >
       {/* Subtle top accent line */}
@@ -39,14 +39,14 @@ const Hero = () => {
             animationDelay: "0s",
           }}
         >
-          Geo-Intelligence · East Africa
+          Geo-Intelligence · Kenya
         </span>
 
         {/* Company name */}
         <h1
           className="font-black text-foreground animate-fade-up leading-none"
           style={{
-            fontSize: "clamp(32px, 12vw, 96px)",
+            fontSize: "clamp(56px, 9vw, 96px)",
             letterSpacing: "0.07em",
             animationDelay: "0.1s",
             background: "linear-gradient(135deg, #141B44 0%, #265B01 100%)",
@@ -62,7 +62,7 @@ const Hero = () => {
           className="text-foreground/55 animate-fade-up mt-6"
           style={{ fontSize: 17, lineHeight: 1.75, maxWidth: 520, animationDelay: "0.2s" }}
         >
-          Africa's geo-intelligence company — engineering end-to-end spatial data
+          Kenya's geo-intelligence company — engineering end-to-end spatial data
           systems from satellite ingestion to enterprise decision APIs.
         </p>
 
@@ -87,7 +87,7 @@ const Hero = () => {
 
         {/* Stats */}
         <div
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 sm:gap-8 animate-fade-up w-full"
+          className="mt-16 grid grid-cols-4 gap-8 animate-fade-up w-full"
           style={{ animationDelay: "0.46s" }}
         >
           {STATS.map((stat, i) => (

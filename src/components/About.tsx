@@ -9,7 +9,7 @@ const challenges = [
     icon: TrendingUp,
     title: "Fragmented Spatial Data",
     description:
-      "Organisations across Africa operate on siloed, static datasets. Real decisions demand unified, near-real-time spatial intelligence at scale.",
+      "Organisations across Kenya operate on siloed, static datasets. Real decisions demand unified, near-real-time spatial intelligence at scale.",
   },
   {
     icon: Waves,
@@ -33,13 +33,13 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Transforming How Africa Interacts with Spatial Data
+            Transforming How Kenya Interacts with Spatial Data
           </h2>
           <div className="w-24 h-1 bg-gradient-secondary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We go beyond traditional mapping. Giospatial Labs engineers end-to-end geospatial
             systems — from satellite ingestion to enterprise decision APIs — designed to operate
-            at the speed and scale that Africa's modern organisations demand.
+            at the speed and scale that Kenya's modern organisations demand.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ const About = () => {
                 <div>
                   <h3 className="text-base font-semibold text-foreground mb-1.5">Our Mission</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    To transform how organisations across Africa understand and interact with
+                    To transform how organisations across Kenya understand and interact with
                     spatial data — delivering geo-intelligence that drives real decisions, not
                     just better maps.
                   </p>
@@ -91,9 +91,9 @@ const About = () => {
                 <div>
                   <h3 className="text-base font-semibold text-foreground mb-1.5">Our Vision</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    To be Africa's leading geo-intelligence and data technology company — the
+                    To be Kenya's leading geo-intelligence and data technology company — the
                     infrastructure layer that modern enterprises rely on to understand, navigate,
-                    and act on spatial data at continental scale.
+                    and act on spatial data at national scale.
                   </p>
                 </div>
               </div>

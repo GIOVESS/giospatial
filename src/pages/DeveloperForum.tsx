@@ -15,7 +15,7 @@ const CHANNELS = [
   {
     icon: MessageSquare,
     title: "Community Discussion",
-    desc: "A space for GIS professionals, data scientists, and government analysts across Africa to share workflows, datasets, and platform extensions.",
+    desc: "A space for GIS professionals, data scientists, and government analysts across Kenya to share workflows, datasets, and platform extensions.",
   },
 ];
 

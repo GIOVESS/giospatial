@@ -91,7 +91,7 @@ const Footer = () => {
               <img src={logoHorizontal} alt="GIOSPATIAL — Intelligence in Every Location" className="h-12 w-auto" />
             </div>
             <p className="text-foreground/50" style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 200 }}>
-              Geo-intelligence and spatial data technology for Africa's most critical decisions.
+              Geo-intelligence and spatial data technology for Kenya's most critical decisions.
             </p>
 
             {/* Contact */}
@@ -106,7 +106,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-2 text-foreground/50" style={{ fontSize: 13 }}>
                 <MapPin size={13} className="text-primary shrink-0" />
-                Nakuru, Kenya · East Africa
+                Nakuru, Kenya
               </div>
             </div>
           </div>

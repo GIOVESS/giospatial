@@ -50,7 +50,7 @@ const Divisions = () => {
       icon: Heart,
       title: "Giospatial Impact",
       description:
-        "Dedicated to leveraging geospatial technology for social good, environmental conservation, and sustainable development initiatives across Africa.",
+        "Dedicated to leveraging geospatial technology for social good, environmental conservation, and sustainable development initiatives across Kenya.",
       color: "secondary",
       path: "/divisions/impact",
     },

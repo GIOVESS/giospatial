@@ -10,7 +10,7 @@ const Impact = () => {
     {
       icon: Leaf,
       title: "Environmental Conservation",
-      description: "Monitor deforestation, biodiversity, and ecosystem health across Africa"
+      description: "Monitor deforestation, biodiversity, and ecosystem health across Kenya"
     },
     {
       icon: Droplet,
@@ -76,7 +76,7 @@ const Impact = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Giospatial Impact is dedicated to using geospatial technology as a force for positive change. 
               We partner with NGOs, governments, and communities to address critical environmental and social 
-              challenges across Africa, providing pro-bono and subsidized services where they matter most.
+              challenges across Kenya, providing pro-bono and subsidized services where they matter most.
             </p>
           </div>
 
@@ -112,10 +112,10 @@ const Impact = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
-              { value: "50+", label: "Conservation Projects" },
-              { value: "2M+", label: "Hectares Monitored" },
-              { value: "100+", label: "Communities Supported" },
-              { value: "20+", label: "NGO Partners" }
+              { value: "15+", label: "Conservation Projects" },
+              { value: "340K+", label: "Hectares Monitored" },
+              { value: "35+", label: "Communities Supported" },
+              { value: "8+", label: "NGO Partners" }
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>

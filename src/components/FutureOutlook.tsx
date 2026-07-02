@@ -20,7 +20,7 @@ const FutureOutlook = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Future Outlook</h2>
           <div className="w-24 h-1 bg-gradient-secondary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Scaling spatial innovation across Africa and beyond
+            Scaling spatial innovation across Kenya and beyond
           </p>
         </div>
 
@@ -35,7 +35,7 @@ const FutureOutlook = () => {
             {
               icon: TrendingUp,
               title: "Expanding Reach",
-              description: "Growing our presence across Africa with offices in 10+ countries by 2026",
+              description: "Growing our presence across Kenya's 47 counties and East Africa by 2027",
               color: "secondary",
             },
             {
@@ -82,7 +82,7 @@ const FutureOutlook = () => {
                 spatial intelligence."
               </p>
               <p className="text-lg text-muted-foreground">
-                We're building the infrastructure for Africa's data-driven future, one location at a time.
+                We're building the infrastructure for Kenya's data-driven future, one location at a time.
               </p>
             </blockquote>
           </Card>

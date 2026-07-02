@@ -61,7 +61,7 @@ const Technology = () => {
           <p style={{ color: "#5a5a5a", fontSize: 16, lineHeight: 1.7, maxWidth: 580, margin: "16px auto 0" }}>
             End-to-end geospatial architecture designed for the modern enterprise — from
             satellite data ingestion and geo-processing to GeoAI analysis and decision APIs.
-            Secure, scalable, and production-proven across Africa.
+            Secure, scalable, and production-proven across Kenya.
           </p>
         </div>
 

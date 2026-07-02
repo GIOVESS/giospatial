@@ -154,7 +154,7 @@ const Products = () => {
             </h3>
             <p style={{ color: "#5a5a5a", fontSize: 13.5, lineHeight: 1.7, marginBottom: 20 }}>
               Configuration-driven deployment parameters enable rapid adaptation to other
-              East African lake basins and river catchments without core engine modification.
+              Kenyan lake basins and river catchments without core engine modification.
             </p>
             <div className="space-y-2.5">
               {archFeatures.map((item) => (

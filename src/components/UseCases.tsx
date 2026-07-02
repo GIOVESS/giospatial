@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Droplets, Building2, Sprout, Zap, Map, Trees
 
 const CARDS = [
   { icon: Droplets, title: "Water Resource Management", desc: "Basin-scale hydrological monitoring, flood risk mapping, and groundwater abstraction tracking with near-real-time satellite feeds." },
-  { icon: Building2, title: "Urban Planning & Growth Analytics", desc: "Track informal settlement expansion, heat islands, and green space equity across African cities using multispectral imagery." },
+  { icon: Building2, title: "Urban Planning & Growth Analytics", desc: "Track informal settlement expansion, heat islands, and green space equity across Kenyan cities using multispectral imagery." },
   { icon: Sprout, title: "Precision Agriculture", desc: "Sentinel-2 NDVI crop health scoring, yield forecasting, and SMS-based alerts for smallholder and commercial farms." },
   { icon: Map, title: "Environmental Impact Assessment", desc: "Automated pre/post-development land cover analysis, riparian buffer compliance checks, and encroachment detection." },
   { icon: Satellite, title: "Disaster Risk & Flood Mapping", desc: "ML-powered submerged zone prediction using Sentinel-1 SAR, with 24-hour alert pipelines via PostGIS and Redis." },
@@ -13,7 +13,7 @@ const CARDS = [
   { icon: ShieldCheck, title: "Real Estate Risk Scoring", desc: "Property-level flood risk, riparian buffer, and soil stability scoring exposed via public-facing REST APIs." },
   { icon: Thermometer, title: "Climate Change Adaptation", desc: "Long-term land cover change detection, drought index tracking, and hydrological shift modelling for planning bodies." },
   { icon: HeartPulse, title: "Public Health Logistics", desc: "Flood-resilient routing for medical supply chains using pgRouting and PostGIS in rural last-mile networks." },
-  { icon: Package, title: "Supply Chain Optimisation", desc: "Spatial demand forecasting and distribution route optimisation across fragmented African logistics corridors." },
+  { icon: Package, title: "Supply Chain Optimisation", desc: "Spatial demand forecasting and distribution route optimisation across Kenya's logistics corridors." },
 ];
 
 const UseCases = () => {
@@ -46,7 +46,7 @@ const UseCases = () => {
             Use Cases
           </h2>
           <p style={{ color: "#5a5a5a", fontSize: 16, lineHeight: 1.7, maxWidth: 580, margin: "0 auto" }}>
-            End-to-end geospatial architecture deployed across Africa's most pressing
+            End-to-end geospatial architecture deployed across Kenya's most pressing
             enterprise and public-sector challenges.
           </p>
         </div>

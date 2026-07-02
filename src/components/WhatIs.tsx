@@ -45,8 +45,8 @@ const WhatIs = () => {
               </p>
               <p>
                 Our flagship platform, NBIS, is a production-grade basin-scale
-                intelligence system built for East Africa's most critical environmental
-                challenges, and deployable across the continent.
+                intelligence system built for Kenya's most critical environmental
+                challenges, and deployable nationwide.
               </p>
             </div>
 
@@ -98,7 +98,7 @@ const WhatIs = () => {
           >
             <img
               src={AERIAL_AFRICA}
-              alt="Aerial view of East Africa — GIOSPATIAL monitoring territory"
+              alt="Aerial view of Kenya — GIOSPATIAL monitoring territory"
               className="w-full object-cover"
               style={{ minHeight: 380, maxHeight: 500 }}
             />
@@ -118,7 +118,7 @@ const WhatIs = () => {
                 </p>
               </div>
               <p className="text-sm font-semibold text-white">
-                East Africa · Lake Naivasha Basin & Beyond
+                Kenya · Lake Naivasha Basin & Beyond
               </p>
             </div>
           </div>

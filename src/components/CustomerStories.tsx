@@ -44,7 +44,7 @@ const STORIES = [
     category: "Food Security & Agriculture",
     headline: "Precision Crop Health Monitoring Across Smallholder Farms",
     body: [
-      "Smallholder farmers across East Africa face pest pressure, drought stress, and yield variability without access to early-warning systems. The Council sought a scalable, low-cost advisory platform.",
+      "Smallholder farmers across Kenya face pest pressure, drought stress, and yield variability without access to early-warning systems. The Council sought a scalable, low-cost advisory platform.",
       "GIOSPATIAL built a Sentinel-2 NDVI crop health monitoring system with fall armyworm early detection (YOLOv8 computer vision) and automated SMS alerts delivered to registered farmers.",
       "Pilot results across three counties showed a 28% improvement in early pest response rates, with the platform scaling to cover 14 counties in the 2025 long-rain season.",
     ],
@@ -102,7 +102,7 @@ const CustomerStories = () => {
             Customer Stories
           </h2>
           <p style={{ color: "#5a5a5a", fontSize: 16, lineHeight: 1.7, maxWidth: 560, margin: "0 auto" }}>
-            Real organisations across Africa using GIOSPATIAL's platform to make
+            Real organisations across Kenya using GIOSPATIAL's platform to make
             faster, better-informed spatial decisions.{" "}
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}

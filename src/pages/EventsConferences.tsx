@@ -17,7 +17,7 @@ const EVENTS = [
   {
     title: "University GIS & Remote Sensing Seminars",
     date: "Ongoing",
-    location: "East Africa, various campuses",
+    location: "Kenya, various campuses",
     desc: "Guest lectures and capacity-building sessions with academic partners on applied geospatial data science.",
   },
 ];
@@ -26,7 +26,7 @@ const EventsConferences = () => (
   <StaticPage
     eyebrow="Events & Conferences"
     title="Events & Conferences"
-    intro="GIOSPATIAL hosts and participates in geospatial summits, urban data workshops, and government data forums across East and Central Africa. Here's where you can find us."
+    intro="GIOSPATIAL hosts and participates in geospatial summits, urban data workshops, and government data forums across Kenya. Here's where you can find us."
   >
     <div className="space-y-4">
       {EVENTS.map((e) => (

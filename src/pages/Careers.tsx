@@ -14,21 +14,21 @@ const OPEN_ROLES = [
   },
   {
     title: "Full-Stack Developer (React / Python)",
-    location: "Remote · East Africa",
+    location: "Remote · Kenya",
     desc: "Ship dashboards, decision APIs, and client-facing tools on our Flask/Django and React stack, working closely with our GIS engineering team.",
   },
   {
     title: "Business Development Associate",
     location: "Nairobi, Kenya",
-    desc: "Build relationships with government agencies, NGOs, and enterprise clients across East Africa to grow GIOSPATIAL's platform and consulting business.",
+    desc: "Build relationships with government agencies, NGOs, and enterprise clients across Kenya to grow GIOSPATIAL's platform and consulting business.",
   },
 ];
 
 const Careers = () => (
   <StaticPage
     eyebrow="Careers"
-    title="Build Africa's geo-intelligence infrastructure"
-    intro="GIOSPATIAL is a small, technical team solving large-scale spatial problems — basin monitoring, urban planning, precision agriculture — across East Africa. We're always interested in hearing from engineers, scientists, and business builders who want to work at the intersection of GIS, AI, and Earth observation."
+    title="Build Kenya's geo-intelligence infrastructure"
+    intro="GIOSPATIAL is a small, technical team solving large-scale spatial problems — basin monitoring, urban planning, precision agriculture — across Kenya. We're always interested in hearing from engineers, scientists, and business builders who want to work at the intersection of GIS, AI, and Earth observation."
   >
     <div>
       <h2>Open roles</h2>
@@ -59,7 +59,7 @@ const Careers = () => (
       <h2>Don't see a fit?</h2>
       <p>
         We're a growing team and open roles change often. If you have geospatial, AI, or software
-        engineering experience and want to work on real infrastructure for African enterprises and
+        engineering experience and want to work on real infrastructure for Kenyan enterprises and
         governments, send us your CV and a short note about what you'd want to build.
       </p>
       <a

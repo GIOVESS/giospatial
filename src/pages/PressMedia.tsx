@@ -5,14 +5,14 @@ const FACTS = [
   { label: "Founded", value: "2024" },
   { label: "Headquarters", value: "Nakuru, Kenya" },
   { label: "Flagship platform", value: "NBIS" },
-  { label: "Countries active", value: "5" },
+  { label: "Counties active", value: "12" },
 ];
 
 const PressMedia = () => (
   <StaticPage
     eyebrow="Press & Media"
     title="Press & Media"
-    intro="GIOSPATIAL engineers end-to-end geospatial systems for Africa's modern enterprise. For interviews, company information, or media assets, contact our team directly."
+    intro="GIOSPATIAL engineers end-to-end geospatial systems for Kenya's modern enterprise. For interviews, company information, or media assets, contact our team directly."
   >
     <div>
       <h2>Company facts</h2>
@@ -54,7 +54,7 @@ const PressMedia = () => (
       <h2>Media inquiries</h2>
       <p>
         For interviews, speaking engagements, or comment on geospatial technology, AI, and
-        development in East Africa, reach our team directly.
+        development in Kenya, reach our team directly.
       </p>
       <a
         href="mailto:press@giospatial.org"

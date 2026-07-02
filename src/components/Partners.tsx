@@ -48,8 +48,8 @@ const Partners = () => {
         <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: "0.6s" }}>
           <Card className="inline-block p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
             <p className="text-sm text-muted-foreground mb-2">Trusted by</p>
-            <p className="text-4xl font-bold bg-gradient-secondary bg-clip-text text-transparent">50+</p>
-            <p className="text-lg text-foreground font-semibold mt-2">Organizations Worldwide</p>
+            <p className="text-4xl font-bold bg-gradient-secondary bg-clip-text text-transparent">20+</p>
+            <p className="text-lg text-foreground font-semibold mt-2">Organisations Across Kenya</p>
           </Card>
         </div>
       </div>

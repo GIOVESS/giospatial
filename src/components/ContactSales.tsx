@@ -57,7 +57,7 @@ const ContactSales = () => {
               </h3>
               <div className="flex items-center gap-2 mb-5" style={{ color: "#5a5a5a", fontSize: 13 }}>
                 <MapPin size={13} className="text-[#265B01]" />
-                Nakuru, Kenya · East Africa
+                Nakuru, Kenya
               </div>
 
               <a

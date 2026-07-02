@@ -52,7 +52,7 @@ const MEGA_NAV = [
     featured: {
       label: "Flagship Platform",
       title: "Naivasha Basin Intelligence System",
-      desc: "Basin-scale geospatial decision-support for East Africa's water resources.",
+      desc: "Basin-scale geospatial decision-support for Kenya's water resources.",
       id: "products",
     },
   },
@@ -90,7 +90,7 @@ const MEGA_NAV = [
     featured: {
       label: "12 Use Cases",
       title: "Enterprise & Public-Sector Solutions",
-      desc: "End-to-end geospatial architecture deployed across Africa's most pressing challenges.",
+      desc: "End-to-end geospatial architecture deployed across Kenya's most pressing challenges.",
       id: "sectors",
     },
   },
@@ -166,7 +166,7 @@ const MEGA_NAV = [
     featured: {
       label: "Our Technology",
       title: "The GIOSPATIAL Engine",
-      desc: "From satellite ingestion to enterprise APIs — end-to-end, production-proven across Africa.",
+      desc: "From satellite ingestion to enterprise APIs — end-to-end, production-proven across Kenya.",
       id: "technology",
     },
   },
@@ -203,8 +203,8 @@ const MEGA_NAV = [
     ],
     featured: {
       label: "Our Story",
-      title: "Built for Africa's Geospatial Future",
-      desc: "Engineering end-to-end geo-intelligence from Nakuru, Kenya, for the entire continent.",
+      title: "Built for Kenya's Geospatial Future",
+      desc: "Engineering end-to-end geo-intelligence from Nakuru, Kenya.",
       id: "about",
     },
   },

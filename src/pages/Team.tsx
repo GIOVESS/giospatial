@@ -114,7 +114,7 @@ const Team = () => (
           The people behind GIOSPATIAL
         </h1>
         <p className="text-foreground/60" style={{ fontSize: 17, lineHeight: 1.75 }}>
-          GIOSPATIAL is growing a team of engineers, scientists, and operators across Africa's
+          GIOSPATIAL is growing a team of engineers, scientists, and operators across Kenya's
           geo-intelligence ecosystem.
         </p>
       </div>

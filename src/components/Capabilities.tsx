@@ -4,7 +4,7 @@ import { dashboardMockup, africaMap, dronesAgriculture, gisMapDark, stockPhotos 
 
 const CAPS = [
   { image: dashboardMockup,            title: "Basin Intelligence Dashboards",  desc: "Unified environmental, hydrological, and agricultural data in a single decision layer — near-real-time, API-backed." },
-  { image: africaMap,                  title: "Continental Coverage Mapping",   desc: "Multi-resolution satellite basemaps across Africa's diverse terrain, from dense rainforest to arid savanna." },
+  { image: africaMap,                  title: "National Coverage Mapping",      desc: "Multi-resolution satellite basemaps across Kenya's diverse terrain, from coastal lowlands to highland forests." },
   { image: stockPhotos.dataArchitecture, title: "Spatial Data Architecture",    desc: "PostGIS-powered spatial databases with REST API exposure — designed for enterprise-scale reads and writes." },
   { image: dronesAgriculture,          title: "Precision Field Analytics",      desc: "Drone and satellite fusion for centimetre-resolution crop, infrastructure, and land cover assessment." },
   { image: stockPhotos.earthObservation, title: "Earth Observation Network",    desc: "Multi-source satellite ingestion: Sentinel-1 SAR, Sentinel-2 MSI, Landsat 8/9, Planet API — normalised and ready." },
