@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 95 98% 18%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 95 70% 32%;
+
+    --secondary: 91 100% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 91 60% 18%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 231 55% 17%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 231 50% 28%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
+    --ring: 95 98% 18%;
+
+    --radius: 0.5rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(95 98% 18%) 0%, hsl(91 100% 9%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(231 55% 17%) 0%, hsl(231 55% 12%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(231, 55%, 10%, 0.85) 0%, hsla(91, 100%, 6%, 0.9) 100%);
+
+    --shadow-glow: 0 0 40px rgba(38, 91, 1, 0.18);
+    --shadow-blue: 0 4px 24px rgba(20, 27, 68, 0.18);
+    --shadow-elegant: 0 12px 40px -10px rgba(20, 27, 68, 0.18);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 12%;
+    --sidebar-primary: 95 98% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 220 15% 12%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 95 98% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Montserrat", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Matches StickyMobileCTA.tsx's lg:hidden breakpoint — reserves space so
+     the fixed bottom bar never overlaps the last bit of footer content. */
+  @media (max-width: 1023px) {
+    body {
+      padding-bottom: 56px;
+    }
+  }
+}
+
+/* Marquee ticker — used by MarqueeBand.tsx across every page's hero/CTA
+   sections. Duplicate the track content twice and this scrolls seamlessly. */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Respect the OS-level motion preference sitewide: scroll-reveal, marquee
+   scroll, route-fade, card hover-lifts, and the fade-up keyframe (Hero,
+   division pages) all collapse to their end state with no animated path.
+   This is a hard requirement, not an optional extra — ships with the
+   motion itself rather than as a follow-up. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Scroll reveal */
+@layer utilities {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  [data-reveal][data-delay="1"] { transition-delay: 0.08s; }
+  [data-reveal][data-delay="2"] { transition-delay: 0.16s; }
+  [data-reveal][data-delay="3"] { transition-delay: 0.24s; }
+  [data-reveal][data-delay="4"] { transition-delay: 0.32s; }
+  [data-reveal][data-delay="5"] { transition-delay: 0.40s; }
+
+  /* Hide scrollbar for carousels */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Blue glow pulse */
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.35; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(1.06); }
+  }
+  .glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+
+  /* Carousel fade */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .tab-fade { animation: fade-in 0.22s ease; }
+
+  /* Route change fade — see AnimatedRoutes in App.tsx. Content only, no
+     transform: a vertical slide here would fight the scroll position
+     React Router already restores on navigation. */
+  @keyframes page-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .page-transition-enter { animation: page-enter 0.28s cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+  /* Static page (legal/info) typography */
+  .static-page-content h2 {
+    font-weight: 700;
+    font-size: 22px;
+    color: hsl(var(--foreground));
+    margin-bottom: 0.75rem;
+  }
+  .static-page-content p,
+  .static-page-content li {
+    color: hsl(var(--foreground) / 0.65);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .static-page-content ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .static-page-content a {
+    color: #265B01;
+    font-weight: 600;
+  }
+  .static-page-content a:hover {
+    text-decoration: underline;
+  }
+}

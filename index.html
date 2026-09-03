@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/giospatial-icon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <!-- Non-blocking font load: fetch the stylesheet without blocking the
+         first paint on it, then swap it in once it arrives. The <noscript>
+         fallback covers browsers/crawlers that don't run the onload swap. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIOSPATIAL · Intelligence in Every Location</title>
+    <meta name="description" content="GIOSPATIAL engineers end-to-end geospatial systems for Africa's modern enterprise. Our flagship platform NBIS delivers basin-scale spatial intelligence across East Africa." />
+    <meta name="author" content="GIOSPATIAL" />
+    <meta name="keywords" content="geospatial, GIS, geo-intelligence, spatial data, GeoAI, Africa, enterprise mapping, NBIS, Naivasha Basin" />
+
+    <link rel="canonical" href="https://www.giospatial.org/" />
+
+    <!--
+      Google Analytics (GA4)
+      -----------------------
+      1. Create a GA4 property at https://analytics.google.com → Admin → Create Property.
+      2. Add a Web data stream for https://www.giospatial.org — this gives you a
+         Measurement ID shaped like G-XXXXXXXXXX.
+      3. Replace BOTH occurrences of "G-XXXXXXXXXX" below with that ID.
+      4. Deploy. Traffic shows up in Realtime within minutes; standard reports
+         populate within 24–48h.
+      This snippet fires on every route change automatically because RouteSEO.tsx
+      already calls gtag('config', ...) with the SPA's virtual pageview on each
+      client-side navigation — no extra wiring needed once the ID is set.
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <meta property="og:title" content="GIOSPATIAL - Intelligence in Every Location" />
+    <meta property="og:description" content="Harnessing GIS, AI, and Earth Observation for smarter decisions. Leading geo-intelligence and data technology solutions across Africa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.giospatial.org/" />
+    <meta property="og:image" content="https://www.giospatial.org/giospatial-logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@giospatial" />
+    <meta name="twitter:image" content="https://www.giospatial.org/giospatial-logo.png" />
+
+    <!--
+      Address confirmed against the official Companies Registry filing
+      (Certificate of Incorporation + Official Search, Reg. PVT-YQ1DZJ29,
+      registered 10 August 2026): registered office is Nairobi (Westlands/
+      Uthiru), not Nakuru — the two data sources previously disagreed;
+      this filing is the authoritative one. Must stay in sync with the
+      same address in ContactSales.tsx, Legal.tsx, and Footer.tsx.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.giospatial.org/#business",
+          "name": "GIOSPATIAL",
+          "legalName": "Giospatial Earth Limited",
+          "alternateName": "Giospatial Earth Limited",
+          "url": "https://www.giospatial.org",
+          "logo": "https://www.giospatial.org/giospatial-logo.png",
+          "image": "https://www.giospatial.org/giospatial-logo.png",
+          "description": "GIOSPATIAL engineers end-to-end geospatial systems for Africa's modern enterprise. Flagship platform NBIS delivers basin-scale spatial intelligence across East Africa.",
+          "telephone": "+254708187019",
+          "email": "sales@giospatial.org",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Naivasha Road, Uthiru",
+            "addressLocality": "Westlands, Nairobi",
+            "postOfficeBoxNumber": "21934",
+            "postalCode": "00100",
+            "addressCountry": "KE"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Giovanni Bwayo",
+            "url": "https://giovannibwayo.site"
+          },
+          "sameAs": [
+            "https://github.com/GIOVESS",
+            "https://giovannibwayo.site",
+            "https://facebook.com/giospatial",
+            "https://twitter.com/giospatial",
+            "https://linkedin.com/company/giospatial",
+            "https://instagram.com/giospatial",
+            "https://youtube.com/@giospatial"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.giospatial.org/#website",
+          "url": "https://www.giospatial.org",
+          "name": "GIOSPATIAL",
+          "publisher": { "@id": "https://www.giospatial.org/#business" }
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
