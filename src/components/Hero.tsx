@@ -126,7 +126,7 @@ const Hero = () => {
             animationDelay: "0.1s",
           }}
         >
-          From orbit to decision.
+          Intelligence in every Location.
         </h1>
 
         {/* Tagline */}

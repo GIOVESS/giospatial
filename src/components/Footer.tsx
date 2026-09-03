@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { logoHorizontal } from "@/assets/images";
+import { logoHorizontalWhite } from "@/assets/images";
 import { Mail, MapPin, Linkedin, Twitter, Youtube, Instagram, Facebook, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import MarqueeBand from "@/components/MarqueeBand";
@@ -141,7 +141,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <img src={logoHorizontal} alt="GIOSPATIAL - Intelligence in Every Location" className="h-12 w-auto brightness-0 invert" loading="lazy" decoding="async" />
+              <img src={logoHorizontalWhite} alt="GIOSPATIAL - Intelligence in Every Location" className="h-12 w-auto" loading="lazy" decoding="async" />
             </div>
             <p className="text-white/40" style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 200 }}>
               Geo-intelligence and spatial data technology for Kenya's most critical decisions.
