@@ -97,7 +97,7 @@ const SiteHeader = () => {
     <>
       <div className="util">
         <div className="wrap">
-          <div className="grp"><span>Nairobi, Kenya</span><span className="sep" /><span>Trading name of Giospatial Earth Limited</span></div>
+          <div className="grp"><span>Nairobi, Kenya</span><span className="sep" /><span> Giospatial Earth Limited</span></div>
           <div className="grp"><a href="mailto:sales@giospatial.org">sales@giospatial.org</a><a href="tel:+254708187019">+254 708 187 019</a></div>
         </div>
       </div>
