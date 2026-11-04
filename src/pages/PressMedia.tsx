@@ -1,71 +1,29 @@
-import StaticPage from "@/components/StaticPage";
-import { Mail, Download } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
-const FACTS = [
-  { label: "Founded", value: "Oct 2025" },
-  { label: "Registered", value: "Aug 2026" },
-  { label: "Headquarters", value: "Nairobi, Kenya" },
-  { label: "Flagship platform", value: "NBIS" },
-];
+const FACTS = [["Oct 2025", "Founded"], ["Aug 2026", "Registered"], ["Nairobi, Kenya", "Headquarters"], ["NBIS", "Flagship platform"]];
 
 const PressMedia = () => (
-  <StaticPage
-    eyebrow="Press & Media"
-    title="Press & Media"
-    intro="GIOSPATIAL engineers end-to-end geospatial systems for Kenya's modern enterprise. For interviews, company information, or media assets, contact our team directly."
-  >
-    <div>
-      <h2>Company facts</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
-        {FACTS.map((f) => (
-          <div
-            key={f.label}
-            className="rounded-lg p-4 text-center border border-black/[0.07]"
-            style={{ background: "#f7f7f5" }}
-          >
-            <div className="font-bold" style={{ fontSize: 18, color: "#265B01" }}>
-              {f.value}
-            </div>
-            <div className="text-foreground/50" style={{ fontSize: 11, marginTop: 4 }}>
-              {f.label}
-            </div>
-          </div>
-        ))}
+  <>
+    <PageHeader
+      crumbs={[{ label: "Press & Media" }]}
+      title="Press & Media"
+      intro="GIOSPATIAL engineers end-to-end geospatial systems for Kenya's modern enterprise. For interviews, company information, or media assets, contact our team directly."
+    />
+    <section className="sec">
+      <div className="wrap" style={{ maxWidth: 900 }}>
+        <h2 style={{ fontSize: 28, marginBottom: 22 }}>Company facts</h2>
+        <div className="facts">{FACTS.map((f) => <div key={f[1]} data-reveal><b>{f[0]}</b><span>{f[1]}</span></div>)}</div>
+        <div className="prose" style={{ marginTop: 48 }} data-reveal>
+          <h2>Brand assets</h2>
+          <p>Logos, brand guidelines, and approved imagery are available on request for press coverage, partnership announcements, and editorial use.</p>
+          <p style={{ marginTop: 16 }}><a href="mailto:press@giospatial.org?subject=Brand%20assets%20request">Request brand assets</a></p>
+          <h2>Media inquiries</h2>
+          <p>For interviews, speaking engagements, or comment on geospatial technology, AI, and development in Kenya, reach our team directly.</p>
+          <p style={{ marginTop: 16 }}><a href="mailto:press@giospatial.org">press@giospatial.org</a></p>
+        </div>
       </div>
-    </div>
-
-    <div>
-      <h2>Brand assets</h2>
-      <p>
-        Logos, brand guidelines, and approved imagery are available on request for press coverage,
-        partnership announcements, and editorial use.
-      </p>
-      <a
-        href="mailto:press@giospatial.org?subject=Brand%20assets%20request"
-        className="inline-flex items-center gap-2 mt-4 font-semibold"
-        style={{ color: "#265B01" }}
-      >
-        <Download size={15} />
-        Request brand assets
-      </a>
-    </div>
-
-    <div>
-      <h2>Media inquiries</h2>
-      <p>
-        For interviews, speaking engagements, or comment on geospatial technology, AI, and
-        development in Kenya, reach our team directly.
-      </p>
-      <a
-        href="mailto:press@giospatial.org"
-        className="inline-flex items-center gap-2 mt-4 font-semibold"
-        style={{ color: "#265B01" }}
-      >
-        <Mail size={15} />
-        press@giospatial.org
-      </a>
-    </div>
-  </StaticPage>
+    </section>
+  </>
 );
 
 export default PressMedia;

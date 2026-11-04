@@ -6,22 +6,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RouteSEO from "./components/RouteSEO";
 import ScrollReveal from "./components/ScrollReveal";
-import StickyMobileCTA from "./components/StickyMobileCTA";
+import Layout from "./components/Layout";
 import Index from "./pages/Index";
 
-// Every route except "/" is lazy-loaded. This matters concretely, not just
-// in theory: adding Leaflet (ContactSales, used on "/") and Recharts
-// (InsightArticle) pushed the single eagerly-bundled JS file from ~490KB
-// to over 1MB before this change — every visitor to any page was
-// downloading every other page's dependencies whether they needed them or
-// not. Splitting per-route means a visitor to /privacy never pays for
-// Leaflet, Recharts, or (via the homepage) the lazy-loaded globe chunk.
+// Every route except "/" is lazy-loaded, so a visitor to /privacy never pays
+// for another page's code (Recharts, for example, only loads with the Insights
+// article that uses it).
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Analytics = lazy(() => import("./pages/divisions/Analytics"));
-const AILab = lazy(() => import("./pages/divisions/AILab"));
-const Platforms = lazy(() => import("./pages/divisions/Platforms"));
-const Consulting = lazy(() => import("./pages/divisions/Consulting"));
-const Impact = lazy(() => import("./pages/divisions/Impact"));
+const Services = lazy(() => import("./pages/Services"));
+const Division = lazy(() => import("./pages/divisions/Division"));
 const Team = lazy(() => import("./pages/Team"));
 const Careers = lazy(() => import("./pages/Careers"));
 const PartnerProgramme = lazy(() => import("./pages/PartnerProgramme"));
@@ -61,11 +54,8 @@ const AnimatedRoutes = () => {
       <Suspense fallback={<RouteFallback />}>
         <Routes location={location}>
           <Route path="/" element={<Index />} />
-          <Route path="/divisions/analytics" element={<Analytics />} />
-          <Route path="/divisions/ai-lab" element={<AILab />} />
-          <Route path="/divisions/platforms" element={<Platforms />} />
-          <Route path="/divisions/consulting" element={<Consulting />} />
-          <Route path="/divisions/impact" element={<Impact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/divisions/:slug" element={<Division />} />
           <Route path="/team" element={<Team />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/partners" element={<PartnerProgramme />} />
@@ -106,8 +96,9 @@ const App = () => (
       <BrowserRouter>
         <RouteSEO />
         <ScrollReveal />
-        <StickyMobileCTA />
-        <AnimatedRoutes />
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

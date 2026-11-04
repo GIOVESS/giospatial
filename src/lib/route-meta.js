@@ -102,6 +102,11 @@ export const ROUTE_META = {
     title: "Legal · GIOSPATIAL",
     description: "Legal notices and regulatory information for GIOSPATIAL.",
   },
+  "/services": {
+    title: "Services · GIOSPATIAL",
+    description:
+      "Geospatial analytics, GeoAI, cloud platforms, consulting and training, and impact work: five service areas delivered as consulting engagements or ongoing platform work.",
+  },
   "/nbis": {
     title: "NBIS · Naivasha Basin Intelligence System · GIOSPATIAL",
     description:
